@@ -8,10 +8,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.TextView;
-
-import com.yalantis.phoenix.PullToRefreshView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
         tabLayout=(TabLayout)findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
         viewList = new ArrayList<Fragment>();// 将要分页显示的View装入数组中
-        final  amusementFragment fragment1=new amusementFragment();
+        final amusementFragment fragment1=new amusementFragment();
         final  financeFragment  fragment2=new financeFragment();
         final  armyFragment fragment3=new armyFragment();
         final  headlineFragment fragment4=new headlineFragment();

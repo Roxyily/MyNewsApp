@@ -5,6 +5,11 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 
+import com.example.thinkpad.wenews.HttpUtil;
+import com.example.thinkpad.wenews.MainActivity;
+import com.example.thinkpad.wenews.NewItem;
+import com.example.thinkpad.wenews.NewsAdapter;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 

@@ -1,5 +1,6 @@
 package com.example.thinkpad.wenews;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -24,9 +25,13 @@ public class CommentActivity extends AppCompatActivity {
     private List<Comment> comments; //评论数据
     private SQLiteDatabase db; //数据库
 
+    private String address;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Intent intent = getIntent();
+        address = intent.getStringExtra("news_address");
         setContentView(R.layout.comment);
         initView(); //初始化视图
         initData(); //初始化数据
@@ -46,8 +51,8 @@ public class CommentActivity extends AppCompatActivity {
         commentAdapter = new CommentAdapter(this, comments); //创建评论适配器
         commentList.setAdapter(commentAdapter); //设置评论列表的适配器
         db = openOrCreateDatabase("comment.db", MODE_PRIVATE, null); //打开或创建数据库
-        db.execSQL("create table if not exists comment (content text, time text)"); //创建评论表
-        Cursor cursor = db.rawQuery("select * from comment", null); //查询评论表
+        db.execSQL("create table if not exists comments (content text, time text ,address text)"); //创建评论表
+        Cursor cursor = db.rawQuery("select * from comments where address='"+address+"'", null); //查询评论表
         while (cursor.moveToNext()) {
             String content = cursor.getString(0); //获取评论内容
             String time = cursor.getString(1); //获取评论时间
@@ -73,7 +78,7 @@ public class CommentActivity extends AppCompatActivity {
                     comments.add(comment); //添加到评论数据集合
                     commentAdapter.notifyDataSetChanged(); //更新评论列表
                     commentInput.setText(""); //清空评论输入框
-                    db.execSQL("insert into comment (content, time) values (?, ?)", new Object[]{content, time}); //插入评论数据到数据库
+                    db.execSQL("insert into comments (content, time ,address) values (?, ?, ?)", new Object[]{content, time, address}); //插入评论数据到数据库
                     Toast.makeText(CommentActivity.this, "评论成功", Toast.LENGTH_SHORT).show(); //提示评论成功
                 } else {
                     Toast.makeText(CommentActivity.this, "评论内容不能为空", Toast.LENGTH_SHORT).show(); //提示评论内容不能为空
