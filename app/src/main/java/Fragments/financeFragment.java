@@ -1,4 +1,4 @@
-package com.example.thinkpad.wenews;
+package Fragments;
 
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -6,6 +6,11 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.thinkpad.wenews.NewsAdapter;
+import com.example.thinkpad.wenews.R;
+
+import Fragments.channelFragment;
 
 public class financeFragment extends channelFragment {
 

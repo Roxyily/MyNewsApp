@@ -1,4 +1,4 @@
-package com.example.thinkpad.wenews;
+package Fragments;
 
 import android.os.Handler;
 import android.support.v4.app.Fragment;

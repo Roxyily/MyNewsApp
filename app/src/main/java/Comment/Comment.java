@@ -1,4 +1,4 @@
-package com.example.thinkpad.wenews;
+package Comment;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

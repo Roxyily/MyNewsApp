@@ -1,4 +1,4 @@
-package com.example.thinkpad.wenews;
+package Comment;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

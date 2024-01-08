@@ -13,13 +13,20 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import Fragments.InternationalFragment;
+import Fragments.amusementFragment;
+import Fragments.armyFragment;
+import Fragments.financeFragment;
+import Fragments.headlineFragment;
+import Fragments.newsFragment;
+
 public class MainActivity extends AppCompatActivity {
 
     ViewPager viewPager;
     static List<TextView> tag;
     List<Fragment> viewList;
     static   int tagPointer=0;
-    static  ProgressDialog  progressDialog ;
+    public static  ProgressDialog  progressDialog ;
     TabLayout tabLayout;
     private SwipeRefreshLayout mSwipeLayout;
     @Override
@@ -34,11 +41,11 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
         viewList = new ArrayList<Fragment>();// 将要分页显示的View装入数组中
         final amusementFragment fragment1=new amusementFragment();
-        final  financeFragment  fragment2=new financeFragment();
-        final  armyFragment fragment3=new armyFragment();
-        final  headlineFragment fragment4=new headlineFragment();
-        final  InternationalFragment fragment5=new InternationalFragment();
-        final  newsFragment fragment6=new newsFragment();
+        final financeFragment fragment2=new financeFragment();
+        final armyFragment fragment3=new armyFragment();
+        final headlineFragment fragment4=new headlineFragment();
+        final InternationalFragment fragment5=new InternationalFragment();
+        final newsFragment fragment6=new newsFragment();
 
         viewList.add(fragment2);
         viewList.add(fragment3);

@@ -10,12 +10,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import org.jsoup.Jsoup;
@@ -23,7 +20,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import static com.example.thinkpad.wenews.MainActivity.progressDialog;
+import Comment.CommentActivity;
 
 public class ContentWebview extends AppCompatActivity {
     private TextView text_title,text_info,text_content;

@@ -1,4 +1,4 @@
-package com.example.thinkpad.wenews;
+package Comment;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,7 +7,11 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.example.thinkpad.wenews.R;
+
 import java.util.List;
+
+import Comment.Comment;
 
 public class CommentAdapter extends BaseAdapter {
     private Context context; //上下文

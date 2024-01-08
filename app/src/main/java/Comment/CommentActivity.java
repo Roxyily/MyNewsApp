@@ -1,4 +1,4 @@
-package com.example.thinkpad.wenews;
+package Comment;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.example.thinkpad.wenews.R;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
